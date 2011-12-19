@@ -18,11 +18,15 @@
 					<%= render @cart %>
 				<% end %>
 			<% end %>
-			
+			<br />
 			<%= link_to 'Home', store_path %><br />
 			<a href="http://www..../faq">Questions</a><br />
 			<a href="http://www..../news">News</a><br />
 			<a href="http://www..../contact">Contact</a><br />
+			<br />
+			<% unless session[:user_id] %>
+				<%= button_to 'Login', login_path, :method => :get %>
+			<% end %>
 			
 			<% if session[:user_id] %>
 				<br />
