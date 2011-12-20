@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Name:</b>
   <%= @order.name %>
@@ -19,6 +17,8 @@
   <b>Pay type:</b>
   <%= @order.pay_type %>
 </p>
+
+<p><%= @order.name %> ordered <%= pluralize(@order.line_items.length, 'item') %>!</p>
 
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
