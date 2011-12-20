@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pragprog Books Online Store</title>
+  <title>Rich's Bookstore: Courtesy of Agile Web Development with Rails</title>
   <%= stylesheet_link_tag    'depot', :media => 'all' %>
   <%= javascript_include_tag :application %>
   <%= csrf_meta_tags %>
@@ -9,7 +9,7 @@
 <body id="store">
 	<div id="banner">
 		<%= image_tag("logo.png") %>
-		<%= @page_title || "Pragmatic Bookshelf" %>
+		<%= @page_title || "Rich's Bookstore" %>
 	</div>
 	<div id="columns">
 		<div id="side">
@@ -20,9 +20,10 @@
 			<% end %>
 			<br />
 			<%= link_to 'Home', store_path %><br />
-			<a href="http://www..../faq">Questions</a><br />
-			<a href="http://www..../news">News</a><br />
-			<a href="http://www..../contact">Contact</a><br />
+			<a href="http://www.amazon.com/">Buy books for real at Amazon!</a><br />
+			<br />
+			<a href="https://twitter.com/intent/tweet?screen_name=eatrichly" class="twitter-mention-button" data-lang="en" data-related="eatrichly">Tweet to @eatrichly</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			<br />
 			<% unless session[:user_id] %>
 				<%= button_to 'Login', login_path, :method => :get %>
